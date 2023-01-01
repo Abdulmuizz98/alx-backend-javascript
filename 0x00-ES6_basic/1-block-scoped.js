@@ -7,6 +7,6 @@ export default function taskBlock (trueOrFalse) {
     var task2 = false
   }
   task = false;
-  task = true;
+  task2 = true;
   return [task, task2]
 }
