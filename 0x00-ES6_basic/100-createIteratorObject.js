@@ -1,20 +1,32 @@
 export default function createIteratorObject(report) {
-    allEmployees = report.allEmployees;
-    len = report.getnumberOfDepartments(allEmployees);
-    
-    const employees = {}
-    for (key in allEmployees)
-        employees = {employees, ...allEmployees.key}
-    
-    employees[Symbol.iterator] = function() {
-            let n = 0;
-            done = false;
-            return {
-                next() {
-                n += 10;
-                if (n == 100) {done = true}
-                return {value:n, done:done};
-                }
-            };
-        }    
+  const allEmployees = report.allEmployees;
+  const len = report.getNumberOfDepartments(allEmployees);
+
+  const employees = { ...allEmployees, };
+
+  employees[Symbol.iterator] = function() {
+    let n = 0;
+    let i = 0;
+    const done = false;
+    return {
+      next() {
+        if (n == len) {
+          return { value: undefined, done: true, };
+        }
+        let key = Object.keys(allEmployees)[n];
+        let arr = allEmployees[key];
+        if (i == arr.length) {
+          n++;
+          i = 0;
+          key = Object.keys(allEmployees)[n];
+          if (n == len) { return { value: undefined, done: true, }; }
+          arr = allEmployees[key];
+        }
+        const value = arr[i];
+        i++;
+        return { value, done, };
+      },
+    };
+  };
+  return employees;
 }
