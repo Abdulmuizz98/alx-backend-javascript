@@ -5,5 +5,5 @@ export default function iterateThroughObject(reportWithIterator) {
   for (const item of reportWithIterator) {
     result += `${item} | `;
   }
-  return result.substring(0, result.length - 2);
+  return result.substring(0, result.length - 3);
 }
