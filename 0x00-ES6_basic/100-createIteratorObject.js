@@ -27,9 +27,9 @@ export default function createIteratorObject(report) {
           const value = arr[i];
           i += 1;
           return { value, done };
-        }
+        },
       };
-    }
+    },
   };
   return employees;
 }
