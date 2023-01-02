@@ -4,6 +4,12 @@ module.exports = {
   ],
   "rules":{
     "space-before-function-paren": ["error", "never"],
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": ["error", {
+      "arrays": "never",
+      "objects": "always",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+  }]
   }
 }
