@@ -9,5 +9,5 @@ export default function createInt8TypedArray(length, position, value) {
     throw new RangeError();
   }
 
-  return buffer;
+  return new DataView(buffer);
 }
