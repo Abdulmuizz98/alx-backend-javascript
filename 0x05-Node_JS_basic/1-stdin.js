@@ -5,8 +5,10 @@ displayMessage("Welcome to Holberton School, what is your name?");
 process.stdin.on('readable', function(){
     const name = process.stdin.read()
     if (name !== null){
-        displayMessage("Your name is: " + name);
+        displayMessage("Your name is: " + name.slice(0, name.length - 1));
     }
+})
+process.stdin.on('end', function(){
     if(!process.stdin.isTTY){
         displayMessage("This important software is now closing")
     }
