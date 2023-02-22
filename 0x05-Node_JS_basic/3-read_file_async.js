@@ -13,10 +13,10 @@ function countStudents(path) {
 
         const csFirstnames = csRecords.map((e) => e.split(',')[0]);
         const sweFirstnames = sweRecords.map((e) => e.split(',')[0]);
-        
+
         console.log(`Number of students: ${lines.length - 1}`);
-        console.log(`Number of students in CS: ${cs.length}. List: ${csFirstnames.join(', ')}`);
-        console.log(`Number of students in SWE: ${swe.length}. List: ${sweFirstnames.join(', ')}`);
+        console.log(`Number of students in CS: ${csRecords.length}. List: ${csFirstnames.join(', ')}`);
+        console.log(`Number of students in SWE: ${sweRecords.length}. List: ${sweFirstnames.join(', ')}`);
         resolve();
       }
     });
