@@ -14,10 +14,11 @@ function countStudents(path) {
         const csFirstnames = csRecords.map((e) => e.split(',')[0]);
         const sweFirstnames = sweRecords.map((e) => e.split(',')[0]);
 
-        console.log(`Number of students: ${lines.length - 1}`);
-        console.log(`Number of students in CS: ${csRecords.length}. List: ${csFirstnames.join(', ')}`);
-        console.log(`Number of students in SWE: ${sweRecords.length}. List: ${sweFirstnames.join(', ')}`);
-        resolve();
+        const message = `Number of students: ${lines.length - 1}\n`
+        + `Number of students in CS: ${csRecords.length}. List: ${csFirstnames.join(', ')}\n`
+        + `Number of students in SWE: ${sweRecords.length}. List: ${sweFirstnames.join(', ')}`;
+        console.log(message);
+        resolve(message);
       }
     });
   });

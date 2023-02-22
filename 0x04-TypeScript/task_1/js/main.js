@@ -1,8 +1,4 @@
-var teacher3 = {
-    firstName: 'John',
-    fullTimeEmployee: false,
-    lastName: 'Doe',
-    location: 'London',
-    contract: false
+var printTeacher = function (firstName, lastName) {
+    return "".concat(firstName[0], ". ").concat(lastName);
 };
-console.log(teacher3);
+console.log(printTeacher('John', 'Doe'));
