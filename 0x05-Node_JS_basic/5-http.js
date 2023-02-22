@@ -11,7 +11,7 @@ const app = http.createServer(async (req, res) => {
     res.end(message);
   } else if (req.url === '/students') {
     const message = countStudents('database.csv');
-    message.then((msg) => res.end(msg));
+    message.then((msg) => res.end(`This is the list of our students\n${msg}`));
   }
 
   // res.statusCode = 200;
