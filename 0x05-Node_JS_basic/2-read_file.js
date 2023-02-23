@@ -12,12 +12,16 @@ function countStudents(path) {
   const cs = lines.filter((e) => e.slice(-2) === 'CS');
   const swe = lines.filter((e) => e.slice(-3) === 'SWE');
 
-  const csFirstnames = cs.map((e) => e.split(',')[0]);
-  const sweFirstnames = swe.map((e) => e.split(',')[0]);
-  // console.log(lines)
-  console.log(`Number of students: ${lines.length - 1}`);
-  console.log(`Number of students in CS: ${cs.length}. List: ${csFirstnames.join(', ')}`);
-  console.log(`Number of students in SWE: ${swe.length}. List: ${sweFirstnames.join(', ')}`);
+  const csFirstnames = cs.map((e) => e.split(',')[0]).join(', ');
+  const sweFirstnames = swe.map((e) => e.split(',')[0]).join(', ');
+
+  const csCount = cs.length;
+  const sweCount = swe.length;
+  const count = csCount + sweCount;
+
+  console.log(`Number of students: ${count}`);
+  console.log(`Number of students in CS: ${csCount}. List: ${csFirstnames}`);
+  console.log(`Number of students in SWE: ${sweCount}. List: ${sweFirstnames}`);
 }
 
 module.exports = countStudents;
