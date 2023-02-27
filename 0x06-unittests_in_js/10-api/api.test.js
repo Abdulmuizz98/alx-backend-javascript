@@ -63,19 +63,10 @@ describe('POST/ login page', function(){
             url: 'http://localhost:7865/login', 
             json: {userName: 'betty'}
         }, (err, res, body) =>{
-            expect(res.statusCode).to.be.equal(201);
+            expect(res.statusCode).to.be.equal(200);
             done();
         })
     })
-    // it('should send correct response body', function(done){
-    //     request.post({ 
-    //         url: 'http://localhost:7865/login', 
-    //         body: "userName=betty"
-    //     }, (err, res, body) =>{  
-    //         expect(body).to.be.equal('Welcome betty');
-    //         done();
-    //     })
-    // })
     it('should send correct response body', function(done){
         request({ 
             method: 'POST',

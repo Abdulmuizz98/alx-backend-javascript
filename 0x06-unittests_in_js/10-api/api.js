@@ -33,7 +33,7 @@ app.get('/available_payments', (req, res) => {
 app.post('/login', (req, res) => {
     // const {id} = req.params;
     const {userName} =  req.body;
-    res.statusCode = 201;
+    res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
     res.end(`Welcome ${userName}`);
 })
