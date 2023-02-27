@@ -30,7 +30,7 @@ describe('Cart page', function(){
         })
     })
     it('should send correct status code when :id is not a number', function(done){
-        request('http://localhost:7865/wrong', (err, res, body) =>{
+        request('http://localhost:7865/cart/wrong', (err, res, body) =>{
             expect(res.statusCode).to.be.equal(404);
             done();
         })
