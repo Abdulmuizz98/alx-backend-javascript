@@ -10,6 +10,9 @@ describe('calculateNumber', function(){
         assert.equal(calculateNumber(1, 3.7), 5);
     })
     it('should return 5', function(){
+        assert.equal(calculateNumber(1.5, 3), 5);
+    })
+    it('should return 5', function(){
         assert.equal(calculateNumber(1.2, 3.7), 5);
     })
     it('should return 6', function(){
