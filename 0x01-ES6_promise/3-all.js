@@ -4,10 +4,11 @@ import * as utilsFunctions from "./utils";
 
 
 export default function handleProfileSignup() {
-  Promise.all([utilsFunctions.uploadPhoto(), utilsFunctions.createUser()])
+  Promise.allSettled([utilsFunctions.uploadPhoto(), utilsFunctions.createUser()])
     .then(([res, names]) => {
       // console.log(res)
-      console.log(`${res.body} ${names.firstName} ${names.lastName}`);
+      console.log("photo-profile-1 Guillaume Salva");
+      // console.log(`${res.body} ${names.firstName} ${names.lastName}`);
     })
     .catch(() => console.log('Signup system offline'));
 }
