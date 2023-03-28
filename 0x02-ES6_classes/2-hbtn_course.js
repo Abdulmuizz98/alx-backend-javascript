@@ -27,7 +27,7 @@ class HolbertonCourse {
   }
 
   get students() {
-    return this._name;
+    return this._students;
   }
 
   set students(std) {
