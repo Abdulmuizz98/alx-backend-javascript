@@ -31,7 +31,7 @@ class HolbertonCourse {
   }
 
   set students(std) {
-    if (!(std instanceof Array) || (std.every((e) => typeof (e) === 'string'))) { throw TypeError('Students must be an array of strings'); }
+    if (!(std instanceof Array) || !(std.every((e) => typeof (e) === 'string'))) { throw TypeError('Students must be an array of strings'); }
     this._students = std;
   }
 }
